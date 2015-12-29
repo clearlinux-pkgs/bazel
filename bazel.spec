@@ -1,6 +1,6 @@
 Name     : bazel
 Version  : 0.1.2
-Release  : 2
+Release  : 3
 URL      : https://github.com/bazelbuild/bazel/archive/0.1.2.tar.gz
 Source0  : https://github.com/bazelbuild/bazel/archive/0.1.2.tar.gz
 Summary  : A Python Mocking and Patching Library for Testing
@@ -13,6 +13,10 @@ BuildRequires : python3-dev
 BuildRequires : setuptools
 BuildRequires : openjdk-bin openjdk-dev
 BuildRequires : zlib-dev zip
+
+Requires : openjdk
+
+%define __strip /bin/true
 
 Patch1: build.patch
 
