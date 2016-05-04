@@ -1,5 +1,5 @@
 Name     : bazel
-Version  : 0.1.2
+Version  : 0.2.1
 Release  : 8
 URL      : https://github.com/bazelbuild/bazel/archive/0.2.1.tar.gz
 Source0  : https://github.com/bazelbuild/bazel/archive/0.2.1.tar.gz
