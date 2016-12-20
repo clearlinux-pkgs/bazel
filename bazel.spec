@@ -1,8 +1,8 @@
 Name     : bazel
-Version  : 0.4.0
+Version  : 0.4.2
 Release  : 9
-URL      : https://github.com/bazelbuild/bazel/archive/0.4.0.tar.gz
-Source0  : https://github.com/bazelbuild/bazel/archive/0.4.0.tar.gz
+URL      : https://github.com/bazelbuild/bazel/archive/0.4.2.tar.gz
+Source0  : https://github.com/bazelbuild/bazel/archive/0.4.2.tar.gz
 Summary  : A Python Mocking and Patching Library for Testing
 Group    : Development/Tools
 License  : Apache-2.0
@@ -13,6 +13,8 @@ BuildRequires : python3-dev
 BuildRequires : setuptools
 BuildRequires : openjdk-bin openjdk-dev
 BuildRequires : zlib-dev zip
+BuildRequires : bazel
+BuildRequires : protobuf-dev
 
 Requires : openjdk
 
@@ -27,11 +29,12 @@ This repository contains a python implementation of the Google commandline
 flags module.
 
 %prep
-%setup -q -n bazel-0.4.0
+%setup -q -n bazel-0.4.2
 %patch1 -p1
 
 %build
-./compile.sh
+./compile.sh compile  /usr/bin/bazel
+
 
 %install
 rm -rf %{buildroot}
