@@ -15,7 +15,7 @@ index a668263..aa3e152 100644
    # absolute locations and has no remote execution, yet. However, this will need
    # to be fixed, maybe with auto-detection?
    cxx_builtin_include_directory: "/usr/lib/gcc/"
-+  cxx_builtin_include_directory: "/usr/lib64/gcc/x86_64-generic-linux/7.2.1/"
++  cxx_builtin_include_directory: "/usr/lib64/gcc/x86_64-generic-linux/7.3.0/"
    cxx_builtin_include_directory: "/usr/local/include"
    cxx_builtin_include_directory: "/usr/include"
    tool_path { name: "gcov" path: "/usr/bin/gcov" }
