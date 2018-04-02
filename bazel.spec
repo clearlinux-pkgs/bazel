@@ -1,6 +1,6 @@
 Name     : bazel
 Version  : 0.11.1
-Release  : 21
+Release  : 22
 URL      : https://github.com/bazelbuild/bazel/archive/0.11.1.tar.gz
 Source0  : https://github.com/bazelbuild/bazel/archive/0.11.1.tar.gz
 Summary  : A Python Mocking and Patching Library for Testing
