@@ -8,7 +8,7 @@ Group    : Development/Tools
 License  : Apache-2.0
 BuildRequires : pbr
 BuildRequires : pip
-BuildRequires : python-dev
+
 BuildRequires : python3-dev
 BuildRequires : setuptools
 BuildRequires : openjdk-bin openjdk-dev
