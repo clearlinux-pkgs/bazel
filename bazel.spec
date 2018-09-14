@@ -1,8 +1,8 @@
 Name     : bazel
-Version  : 0.16.1
+Version  : 0.17.1
 Release  : 28
-URL      : https://github.com/bazelbuild/bazel/archive/0.16.1.tar.gz
-Source0  : https://github.com/bazelbuild/bazel/archive/0.16.1.tar.gz
+URL      : https://github.com/bazelbuild/bazel/archive/0.17.1.tar.gz
+Source0  : https://github.com/bazelbuild/bazel/archive/0.17.1.tar.gz
 Summary  : A Python Mocking and Patching Library for Testing
 Group    : Development/Tools
 License  : Apache-2.0
@@ -18,9 +18,9 @@ BuildRequires : protobuf-dev
 
 Requires : openjdk
 
-Source10: https://github.com/google/desugar_jdk_libs/archive/f5e6d80c6b4ec6b0a46603f72b015d45cf3c11cd.zip
+Source10: https://github.com/google/desugar_jdk_libs/archive/fd937f4180c1b557805219af4482f1a27eb0ff2b.zip
 Source11: https://mirror.bazel.build/openjdk/azul-zulu-9.0.7.1-jdk9.0.7/zulu9.0.7.1-jdk9.0.7-linux_x64-allmodules.tar.gz
-
+Source12: https://github.com/bazelbuild/bazel-skylib/archive/7490380c6bbf9a5a060df78dc2222e7de6ffae5c.tar.gz
 
 %define __strip /bin/true
 %define debug_package %{nil}
@@ -32,7 +32,7 @@ This repository contains a python implementation of the Google commandline
 flags module.
 
 %prep
-%setup -q -n bazel-0.16.1
+%setup -q -n bazel-0.17.1
 %patch1 -p1
 
 %build
@@ -45,6 +45,7 @@ InstallCache() {
 
 InstallCache %{SOURCE10}
 InstallCache %{SOURCE11}
+InstallCache %{SOURCE12}
 
 #./compile.sh compile  /usr/bin/bazel
 bazel --output_base=/tmp/bazel build --repository_cache=/tmp/cache   //src:bazel
