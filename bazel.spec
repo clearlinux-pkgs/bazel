@@ -1,6 +1,6 @@
 Name     : bazel
 Version  : 0.22.0
-Release  : 29
+Release  : 30
 URL      : https://github.com/bazelbuild/bazel/archive/0.22.0.tar.gz
 Source0  : https://github.com/bazelbuild/bazel/archive/0.22.0.tar.gz
 Summary  : A Python Mocking and Patching Library for Testing
