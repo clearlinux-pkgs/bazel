@@ -1,8 +1,8 @@
 Name     : bazel
-Version  : 0.26.0
+Version  : 0.27.0
 Release  : 31
-URL      : https://github.com/bazelbuild/bazel/archive/0.26.0.tar.gz
-Source0  : https://github.com/bazelbuild/bazel/archive/0.26.0.tar.gz
+URL      : https://github.com/bazelbuild/bazel/archive/0.27.0.tar.gz
+Source0  : https://github.com/bazelbuild/bazel/archive/0.27.0.tar.gz
 Summary  : A Python Mocking and Patching Library for Testing
 Group    : Development/Tools
 License  : Apache-2.0
@@ -30,7 +30,7 @@ Source18 : https://mirror.bazel.build/openjdk/azul-zulu11.29.3-ca-jdk11.0.2/zulu
 Source19 : https://mirror.bazel.build/bazel_java_tools/java_tools_pkg-0.5.1.tar.gz
 Source20 : https://mirror.bazel.build/openjdk/azul-zulu11.29.3-ca-jdk11.0.2/zulu11.29.3-ca-jdk11.0.2-linux_x64-minimal-524ae2ca2a782c9f15e00f08bd35b3f8ceacbd7f-1556011926.tar.gz
 Source21 : https://mirror.bazel.build/openjdk/azul-zulu11.2.3-jdk11.0.1/zulu11.2.3-jdk11.0.1-linux_x64.tar.gz
-Source22 : https://mirror.bazel.build/bazel_java_tools/java_tools_javac10_linux-x86_64-v1.0.zip
+Source22 : https://mirror.bazel.build/bazel_java_tools/releases/javac10/v3.1/java_tools_javac10_linux-v3.1.zip
 
 # stripping ends up removing the java payload from the self extracting jar
 %define __strip /bin/true
@@ -43,7 +43,7 @@ This repository contains a python implementation of the Google commandline
 flags module.
 
 %prep
-%setup -q -n bazel-0.26.0
+%setup -q -n bazel-0.27.0
 #%patch1 -p1
 
 %build
