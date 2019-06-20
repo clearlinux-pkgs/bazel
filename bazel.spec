@@ -1,8 +1,8 @@
 Name     : bazel
-Version  : 0.25.0
+Version  : 0.26.0
 Release  : 31
-URL      : https://github.com/bazelbuild/bazel/archive/0.25.0.tar.gz
-Source0  : https://github.com/bazelbuild/bazel/archive/0.25.0.tar.gz
+URL      : https://github.com/bazelbuild/bazel/archive/0.26.0.tar.gz
+Source0  : https://github.com/bazelbuild/bazel/archive/0.26.0.tar.gz
 Summary  : A Python Mocking and Patching Library for Testing
 Group    : Development/Tools
 License  : Apache-2.0
@@ -28,7 +28,11 @@ Source16 : https://mirror.bazel.build/openjdk/azul-zulu11.29.3-ca-jdk11.0.2/zulu
 Source17 : https://mirror.bazel.build/openjdk/azul-zulu10.2+3-jdk10.0.1/zulu10.2+3-jdk10.0.1-linux_x64-allmodules.tar.gz
 Source18 : https://mirror.bazel.build/openjdk/azul-zulu11.29.3-ca-jdk11.0.2/zulu11.29.3-ca-jdk11.0.2-linux_x64-minimal-7a3af9f6f98ce69c1ebd2931817c2664a18cf279-1552657479.tar.gz
 Source19 : https://mirror.bazel.build/bazel_java_tools/java_tools_pkg-0.5.1.tar.gz
+Source20 : https://mirror.bazel.build/openjdk/azul-zulu11.29.3-ca-jdk11.0.2/zulu11.29.3-ca-jdk11.0.2-linux_x64-minimal-524ae2ca2a782c9f15e00f08bd35b3f8ceacbd7f-1556011926.tar.gz
+Source21 : https://mirror.bazel.build/openjdk/azul-zulu11.2.3-jdk11.0.1/zulu11.2.3-jdk11.0.1-linux_x64.tar.gz
+Source22 : https://mirror.bazel.build/bazel_java_tools/java_tools_javac10_linux-x86_64-v1.0.zip
 
+# stripping ends up removing the java payload from the self extracting jar
 %define __strip /bin/true
 %define debug_package %{nil}
 
@@ -39,7 +43,7 @@ This repository contains a python implementation of the Google commandline
 flags module.
 
 %prep
-%setup -q -n bazel-0.25.0
+%setup -q -n bazel-0.26.0
 #%patch1 -p1
 
 %build
@@ -60,6 +64,9 @@ InstallCache %{SOURCE16}
 InstallCache %{SOURCE17}
 InstallCache %{SOURCE18}
 InstallCache %{SOURCE19}
+InstallCache %{SOURCE20}
+InstallCache %{SOURCE21}
+InstallCache %{SOURCE22}
 
 #./compile.sh compile  /usr/bin/bazel
 bazel --output_base=/tmp/bazel build --repository_cache=/tmp/cache   //src:bazel
