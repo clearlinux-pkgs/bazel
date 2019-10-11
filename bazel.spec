@@ -1,6 +1,6 @@
 Name     : bazel
 Version  : 0.27.0
-Release  : 31
+Release  : 32
 URL      : https://github.com/bazelbuild/bazel/archive/0.27.0.tar.gz
 Source0  : https://github.com/bazelbuild/bazel/archive/0.27.0.tar.gz
 Summary  : A Python Mocking and Patching Library for Testing
@@ -38,6 +38,7 @@ Source23 : https://mirror.bazel.build/bazel_java_tools/releases/javac11/v2.0/jav
 %define debug_package %{nil}
 
 Patch1: 0001-build.patch
+Patch2: rename-gettid-functions.patch
 
 %description
 This repository contains a python implementation of the Google commandline
@@ -46,6 +47,11 @@ flags module.
 %prep
 %setup -q -n bazel-0.27.0
 #%patch1 -p1
+
+# https://github.com/vbatts/copr-build-bazel/commit/75516ad2211feb6326ce330de0efcd4ee662aba4
+pushd third_party/grpc/
+%patch2 -p0
+popd
 
 %build
 
