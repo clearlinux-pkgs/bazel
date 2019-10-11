@@ -31,6 +31,7 @@ Source19 : https://mirror.bazel.build/bazel_java_tools/java_tools_pkg-0.5.1.tar.
 Source20 : https://mirror.bazel.build/openjdk/azul-zulu11.29.3-ca-jdk11.0.2/zulu11.29.3-ca-jdk11.0.2-linux_x64-minimal-524ae2ca2a782c9f15e00f08bd35b3f8ceacbd7f-1556011926.tar.gz
 Source21 : https://mirror.bazel.build/openjdk/azul-zulu11.2.3-jdk11.0.1/zulu11.2.3-jdk11.0.1-linux_x64.tar.gz
 Source22 : https://mirror.bazel.build/bazel_java_tools/releases/javac10/v3.1/java_tools_javac10_linux-v3.1.zip
+Source23 : https://mirror.bazel.build/bazel_java_tools/releases/javac11/v2.0/java_tools_javac11_linux-v2.0.zip
 
 # stripping ends up removing the java payload from the self extracting jar
 %define __strip /bin/true
@@ -67,6 +68,7 @@ InstallCache %{SOURCE19}
 InstallCache %{SOURCE20}
 InstallCache %{SOURCE21}
 InstallCache %{SOURCE22}
+InstallCache %{SOURCE23}
 
 #./compile.sh compile  /usr/bin/bazel
 bazel --output_base=/tmp/bazel build --repository_cache=/tmp/cache   //src:bazel
