@@ -1,8 +1,8 @@
 Name     : bazel
-Version  : 3.6.0
-Release  : 35
-URL      : https://github.com/bazelbuild/bazel/releases/download/3.6.0/bazel-3.6.0-dist.zip
-Source0  : https://github.com/bazelbuild/bazel/releases/download/3.6.0/bazel-3.6.0-dist.zip
+Version  : 3.7.0
+Release  : 36
+URL      : https://github.com/bazelbuild/bazel/releases/download/3.7.0/bazel-3.7.0-dist.zip
+Source0  : https://github.com/bazelbuild/bazel/releases/download/3.7.0/bazel-3.7.0-dist.zip
 Summary  : Open-source build and test tool
 Group    : Development/Tools
 License  : Apache-2.0
@@ -36,7 +36,7 @@ large codebases across multiple repositories, and large numbers of users.
 %build
 export SOURCE_DATE_EPOCH=1602285960
 export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk/
-export EXTRA_BAZEL_ARGS="--host_javabase=@local_jdk//:jdk"
+export EXTRA_BAZEL_ARGS="--host_javabase=@local_jdk//:jdk --color=no --curses=no --logging=1"
 ./compile.sh
 
 %install
