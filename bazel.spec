@@ -1,6 +1,6 @@
 Name     : bazel
 Version  : 3.7.0
-Release  : 38
+Release  : 39
 URL      : https://github.com/bazelbuild/bazel/releases/download/3.7.0/bazel-3.7.0-dist.zip
 Source0  : https://github.com/bazelbuild/bazel/releases/download/3.7.0/bazel-3.7.0-dist.zip
 Summary  : Open-source build and test tool
