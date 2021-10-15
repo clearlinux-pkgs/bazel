@@ -1,6 +1,6 @@
 Name     : bazel
 Version  : 3.7.0
-Release  : 40
+Release  : 41
 URL      : https://github.com/bazelbuild/bazel/releases/download/3.7.0/bazel-3.7.0-dist.zip
 Source0  : https://github.com/bazelbuild/bazel/releases/download/3.7.0/bazel-3.7.0-dist.zip
 Summary  : Open-source build and test tool
@@ -19,6 +19,7 @@ BuildRequires : zip
 BuildRequires : zlib-dev
 Requires : openjdk
 Requires : usrbinjava
+Patch1: fix-build.patch
 
 # stripping ends up removing the java payload from the self extracting jar
 %define __strip /bin/true
@@ -32,6 +33,7 @@ large codebases across multiple repositories, and large numbers of users.
 
 %prep
 %setup -q -c -n bazel-%{version}
+%patch1 -p1
 
 %build
 export SOURCE_DATE_EPOCH=1602285960
